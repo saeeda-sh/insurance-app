@@ -5,10 +5,10 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from backend.app.main import app
-from backend.app import models
-from backend.app.database import SessionLocal, engine
-from backend.app.utils.seed_db import seed_db
+from . import app
+from ..app import models
+from ..app.database import SessionLocal, engine
+from ..app.utils.seed_db import seed_db
 from ..app.utils.config import settings
 
 # Override the database URL with local db for testing
