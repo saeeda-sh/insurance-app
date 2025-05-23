@@ -7,8 +7,6 @@ Built using:
 - Frontend: React, Material UI
 - Database: PostgreSQL
 
-
-
 ## Setup with Docker
 1. Build and start Docker container. 
     ```shell
@@ -45,3 +43,9 @@ Built using:
     pytest
     ```
 
+## Possible improvements
+- More unit tests for the endpoints on the backend with mock API calls, testing components on the front-end, and just more tests testing edge cases, invalid data inputs etc. 
+-  Improved error handling -- instead of handling errors in each function, can centralize it by using custom exception handlers on FastAPI.
+- The database is hosted on Render. I did include the external database URL in
+.env and GitHub Secrets. But this would normally be omitted since it includes credentials. 
+- Possibly using async and await with FastAPI in the routers to improve performance when making database calls.
