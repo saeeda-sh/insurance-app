@@ -5,7 +5,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from . import app
+from .. import app
 from ..app import models
 from ..app.database import SessionLocal, engine
 from ..app.utils.seed_db import seed_db

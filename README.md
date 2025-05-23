@@ -20,6 +20,7 @@ Built using:
     ```shell
     cd backend
     pip install poetry
+    poetry env use python3.11
     poetry install
     ```
 
