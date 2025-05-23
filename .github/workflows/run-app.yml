@@ -1,4 +1,4 @@
-name: CI Workflow for Backend and Frontend
+name: CI Workflow
 
 on:
   push:
@@ -28,12 +28,6 @@ jobs:
       run: |
         cd backend
         poetry install --no-interaction
-  
-    - name: Run Alembic Migrations
-      env:
-        DATABASE_URL: ${{ secrets.DATABASE_URL }} 
-      run: |
-        poetry run alembic upgrade head
 
     - name: Start backend
       env:
@@ -47,25 +41,3 @@ jobs:
         DATABASE_URL: ${{ secrets.DATABASE_URL }}
       run: |
         poetry run pytest
-
-  frontend:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      - name: Install frontend dependencies
-        run: |
-          cd frontend
-          npm install
-
-      - name: Start frontend
-        run: |
-          cd frontend
-          npm start
