@@ -1,0 +1,13 @@
+# Environments
+.env
+.venv
+env/
+venv/
+
+.DS_Store
+.idea
+.vscode
+__pycache__
+.pytest_cache
+.python-version
+poetry.lock

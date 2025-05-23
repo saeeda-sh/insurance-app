@@ -1,0 +1,31 @@
+[project]
+name = "tm-insurance-app"
+version = "0.1.0"
+description = "Web app to display insurance policy data"
+authors = [
+    {name = "Saeeda",email = "saeedashukor@outlook.com"}
+]
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "dotenv (>=0.9.9,<0.10.0)",
+    "fastapi-utils (>=0.8.0,<0.9.0)",
+    "pydantic-settings (>=2.9.1,<3.0.0)",
+    "typing-inspect (>=0.9.0,<0.10.0)",
+    "uvicorn (>=0.34.2,<0.35.0)",
+    "sqlalchemy (>=2.0.41,<3.0.0)",
+    "fastapi (>=0.115.12,<0.116.0)",
+    "psycopg2 (>=2.9.10,<3.0.0)",
+    "pydantic (>=2.11.4,<3.0.0)",
+    "alembic (>=1.16.1,<2.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
