@@ -1,5 +1,5 @@
 [project]
-name = "tm-insurance-app"
+name = "insurance-app"
 version = "0.1.0"
 description = "Web app to display insurance policy data"
 authors = [
