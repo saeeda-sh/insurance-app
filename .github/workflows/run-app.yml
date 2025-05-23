@@ -32,4 +32,4 @@ jobs:
       env:
         DATABASE_URL: ${{ secrets.DATABASE_URL }}
       run: |
-        pytest
+        poetry run pytest
